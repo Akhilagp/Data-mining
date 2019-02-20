@@ -1,0 +1,33 @@
+The inner and outer fences are ranges that you can calculate using the Q1 and Q3. To do this, you need to first calculate the interquartile range — the difference between Q1 and Q3. In this case, Q3-Q1 = 3.21.
+
+A data point that falls outside the inner fence is called a minor outlier.
+
+Inner Fence:
+
+Lower bound = Q1 - (1.5 * (Q3-Q1))
+
+Upper bound = Q3 + (1.5 * (Q3-Q1))
+
+In our example, the bounds for the inner fence are:
+
+Lower Bound = 0.565 - (1.5*3.21) = -4.25
+
+Upper Bound = 3.775 + (1.5*3.21) = 8.59
+
+The data points for Day 11 and Day 4, that is 9.04 and 101.20 respectively, qualify as minor outliers.
+
+A data point that falls outside the outer fence is called a major outlier.
+
+Outer Fence:
+
+Lower bound = Q1 - (3 * (Q3-Q1))
+
+Upper bound = Q3 + (3 * (Q3-Q1))
+
+In our example, the bounds for the outer fence are:
+
+Lower Bound = 0.565 - (3*3.21) = -9.07
+
+Upper Bound = 3.775 + (3*3.21) = 13.41
+
+The data point for Day 11 (which is $101.20) qualifies as a major outlier.
